@@ -1,0 +1,2 @@
+rootProject.name='First_Hackathon'
+include ':app'

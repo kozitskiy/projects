@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Finance calc</string>
+    <string name="deposit_name">Deposit calc</string>
+    <string name="credit_name">Credit calc</string>
+    <string name="btn_credit">Credit</string>
+    <string name="btn_deposit">Deposit</string>
+    <string name="edt_deposit_sum">Сумма вклада</string>
+    <string name="txt_deposit_sum_error">Введите сумму!</string>
+    <string name="edt_deposit_rate">Ставка %</string>
+    <string name="txt_deposit_rate_error">Введите cтавку в %!</string>
+    <string name="edt_deposit_period">Срок(мес)</string>
+    <string name="txt_deposit_period_error">Введите срок!</string>
+    <string name="chk_capitalization">Капитализация</string>
+    <string name="edt_deposit_replenishment">Пополнение(мес)</string>
+    <string name="edt_deposit_tax">Налог в %</string>
+    <string name="string_txt_deposit_monthly_income">Ежемесячный доход:</string>
+    <string name="string_txt_deposit_total_income_through_months">Общий доход через N мес:</string>
+    <string name="string_txt_deposit_total_replenishment">Общая сумма пополнений:</string>
+    <string name="string_txt_deposit_total_sum">Итоговая сумма(% + вклад):</string>
+    <string name="string_txt_empty">Пусто</string>
+    <string name="edt_credit_sum">Сумма кредита:</string>
+    <string name="txt_credit_sum_error">Введите сумму!</string>
+    <string name="edt_credit_rate">Ставка %</string>
+    <string name="txt_credit_rate_error">Введите cтавку в %!</string>
+    <string name="edt_credit_period">Срок(мес)</string>
+    <string name="txt_credit_period_error">Введите срок!</string>
+    <string name="edt_credit_insurance">Страховка %</string>
+    <string name="edt_credit_prepayment">Аванс %</string>
+    <string name="edt_credit_commission">Комиссия %</string>
+    <string name="string_txt_credit_first_payment">Первоначальный взнос:</string>
+    <string name="string_txt_credit_monthly_payment">Ежемесячный платеж:</string>
+    <string name="string_txt_credit_overpayment">Переплата по кредиту :</string>
+    <string name="string_txt_credit_total_repayment_sum">Итоговая сумма погашения:</string>
+</resources>
