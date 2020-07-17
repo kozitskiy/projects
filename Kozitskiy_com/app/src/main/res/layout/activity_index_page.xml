@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_block"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f7f7f7"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+            android:orientation="vertical"
+            tools:context=".IndexPageActivity">
+
+            <include layout="@layout/template_main_part" />
+
+            <include layout="@layout/template_about_me" />
+
+            <include layout="@layout/template_what_i_do" />
+
+            <include layout="@layout/template_skills" />
+
+            <include layout="@layout/template_technologies" />
+
+            <include layout="@layout/template_portfolio" />
+
+            <include layout="@layout/template_contacts" />
+
+            <include layout="@layout/template_footer" />
+
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/template_header" />
+</FrameLayout>

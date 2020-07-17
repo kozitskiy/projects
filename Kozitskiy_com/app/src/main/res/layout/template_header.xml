@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/head_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/head_name"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:gravity="fill_vertical"
+            android:paddingTop="4dp"
+            tools:text="VKD"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_menu_button"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/menu_pic"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="43dp" />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
