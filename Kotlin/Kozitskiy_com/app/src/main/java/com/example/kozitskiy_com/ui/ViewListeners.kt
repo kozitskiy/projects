@@ -7,7 +7,6 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.core.view.children
 import com.example.kozitskiy_com.*
-import com.example.kozitskiy_com.network.NetworkManager
 import com.example.kozitskiy_com.ui.handlers.EmailFormHandler
 import com.example.kozitskiy_com.ui.handlers.FormValidateHandler
 import com.example.kozitskiy_com.utils.*
@@ -68,7 +67,7 @@ object ViewListeners {
         context.email_btn.setOnClickListener {
             val isFormValid = FormValidateHandler(context).isFormValid()
             if (isFormValid) {
-                NetworkManager(context).sendEmail(
+                context.requestManager.getEmailData(
                     context.email_fname.text.toString(),
                     context.email_lname.text.toString(),
                     context.email_email.text.toString(),

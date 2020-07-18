@@ -14,7 +14,7 @@ class ApiDataRequest(context: IndexPageActivity) : ApiRequest(context) {
 
     @SuppressLint("CheckResult")
     override fun doRequest(): Disposable {
-        context.mainBodyChanger(ACTION_PROGRESS_BAR_SHOW)
+        context.setMainBodyView(ACTION_PROGRESS_BAR_SHOW)
         return ApiService.getResponseData()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -22,7 +22,7 @@ class ApiDataRequest(context: IndexPageActivity) : ApiRequest(context) {
     }
 
     override fun <T> success(response: T) {
-        context.dataResponseForUi(response as DataApiObjects)
-        context.mainBodyChanger(ACTION_PROGRESS_BAR_HIDE)
+        context.setMainData(response as DataApiObjects)
+        context.setMainBodyView(ACTION_PROGRESS_BAR_HIDE)
     }
 }

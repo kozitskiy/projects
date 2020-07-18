@@ -3,19 +3,19 @@ package com.example.kozitskiy_com
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kozitskiy_com.network.NetworkManager
+import com.example.kozitskiy_com.network.RequestManager
 import com.example.kozitskiy_com.network.models.DataApiObjects
 import com.example.kozitskiy_com.network.models.DataEmailResponse
 import com.example.kozitskiy_com.ui.*
 import com.example.kozitskiy_com.ui.handlers.EmailFormHandler
 import com.example.kozitskiy_com.ui.handlers.MainBodyHandler
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
 
-class IndexPageActivity : AppCompatActivity(), UiDataReceiver {
+class IndexPageActivity : AppCompatActivity(),
+    MainReceiver.UiReceiver {
 
     private lateinit var mainBodyHandler: MainBodyHandler
-    private var disposables: CompositeDisposable = CompositeDisposable()
+
+    val requestManager: RequestManager = RequestManager(this)
 
     @SuppressLint("CheckResult", "ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,27 +24,23 @@ class IndexPageActivity : AppCompatActivity(), UiDataReceiver {
 
         mainBodyHandler = MainBodyHandler(this)
 
-        NetworkManager(this).getDataForUi()
+        requestManager.getMainData()
     }
 
-    override fun dataResponseForUi(dataApiObjects: DataApiObjects) {
+    override fun setMainData(dataApiObjects: DataApiObjects) {
         ViewsSetter(dataApiObjects, this).setAllViews()
     }
 
-    override fun mainBodyChanger(action: String) {
+    override fun setMainBodyView(action: String) {
         mainBodyHandler.changeBodyByAction(action)
     }
 
-    override fun emailResponseForUi(dataEmailResponse: DataEmailResponse) {
+    override fun setEmailBlock(dataEmailResponse: DataEmailResponse) {
         EmailFormHandler(this, dataEmailResponse.response).process()
-    }
-
-    override fun disposableRx(disposable: Disposable) {
-        disposables.add(disposable)
     }
 
     override fun onStop() {
         super.onStop()
-        disposables.dispose()
+        requestManager.onActivityDestroy()
     }
 }

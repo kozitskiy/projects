@@ -30,6 +30,6 @@ class ApiEmailRequest(
     }
 
     override fun <T> success(response: T) {
-        context.emailResponseForUi(response as DataEmailResponse)
+        context.setEmailBlock(response as DataEmailResponse)
     }
 }
