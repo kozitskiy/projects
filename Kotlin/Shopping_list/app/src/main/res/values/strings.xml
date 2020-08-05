@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="new_purchase">New Purchase</string>
+    <string name="actual_purchases">Actual Purchases</string>
+    <string name="select_all">Select All</string>
+    <string name="empty_list">Empty List</string>
+    <string name="purchase_has_been_added">Purchase has been added</string>
+    <string name="purchase_hasn_t_been_added">Purchase hasn\'t been added</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="purchase_name">Purchase name</string>
+    <string name="add_purchase">Add purchase</string>
+</resources>

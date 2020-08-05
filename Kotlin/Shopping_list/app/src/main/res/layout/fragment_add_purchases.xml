@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".ui.AddingPurchasesFragment">
+
+    <TextView
+        android:id="@+id/purchase_result_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/add_msg_margin"
+        android:gravity="center"
+        android:text="@string/purchase_has_been_added"
+        android:textSize="@dimen/main_text_size"
+        android:visibility="invisible" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/purchase_adding_img"
+        android:layout_width="@dimen/image_width_size"
+        android:layout_height="@dimen/image_height_size"
+        android:layout_gravity="center"
+        android:src="@drawable/purchase_default" />
+
+    <EditText
+        android:id="@+id/purchase_adding_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/add_field_margin_hor"
+        android:layout_marginTop="20dp"
+        android:hint="@string/purchase_name" />
+
+    <Button
+        android:id="@+id/btn_upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/add_field_margin_hor"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:background="@color/colorPrimary"
+        android:text="@string/upload_image"
+        android:textColor="@color/colorButton" />
+
+    <Button
+        android:id="@+id/btn_add_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/add_field_margin_hor"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:background="@color/colorPrimary"
+        android:text="@string/add_purchase"
+        android:textColor="@color/colorButton" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
